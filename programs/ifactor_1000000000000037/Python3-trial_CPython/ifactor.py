@@ -2,7 +2,6 @@
 # MIT license
 
 from sys import argv
-from math import sqrt, ceil
 
 N = argv[1]
 n = int(N)

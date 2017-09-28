@@ -5,7 +5,7 @@
 -export([main/1]).
 
 ifactor(N) when is_integer(N), N > 1 -> ifactor(N, N div 2, N rem 2, 2, []).
-ifactor(N, Dk, P) when is_integer(N), N > 1 -> ifactor(N, N div Dk, N rem Dk, Dk, P);
+ifactor(N, Dk, P) when N > 1 -> ifactor(N, N div Dk, N rem Dk, Dk, P);
 ifactor(_N, _Dk, P) -> lists:reverse(P).
 ifactor(_N, Q, 0, Dk, P) -> ifactor(Q, Dk, [Dk|P]);
 ifactor(N, Q, _R, 2, P) when Q > 2 -> ifactor(N, 3, P);
