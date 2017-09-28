@@ -3,8 +3,7 @@
 
 N = ARGS[1]
 n = parse(BigInt, N)
-d = 2:n
-dk = start(d)
+dk = 2
 p = []
 
 while n > 1
@@ -13,7 +12,7 @@ while n > 1
         push!(p, dk)
         n = q
     elseif q > dk
-        i, dk = next(d, dk)
+        dk = dk + 1
     else
         push!(p, n)
         break

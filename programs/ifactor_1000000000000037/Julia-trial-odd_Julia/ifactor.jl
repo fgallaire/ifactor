@@ -3,7 +3,6 @@
 
 N = ARGS[1]
 n = parse(BigInt, N)
-d = 3:2:n
 dk = 2
 p = []
 
@@ -14,9 +13,9 @@ while n > 1
         n = q
     elseif q > dk
         if dk == 2
-            dk = start(d)
+            dk = 3
         else
-            i, dk = next(d, dk)
+            dk = dk + 2
         end
     else
         push!(p, n)

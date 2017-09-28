@@ -5,8 +5,7 @@ from sys import argv
 
 N = argv[1]
 n = int(N)
-d = iter(range(2, n))
-dk = next(d)
+dk = 2
 p = []
 
 while n > 1:
@@ -15,7 +14,7 @@ while n > 1:
         p.append(dk)
         n = q
     elif q > dk:
-        dk = next(d)
+        dk = dk + 1
     else:
         p.append(n)
         break
